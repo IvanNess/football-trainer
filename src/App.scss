@@ -1,0 +1,31 @@
+$btn-background-color: royalblue;
+$btn-hover-background-color: violet;
+
+h1, h2, h3, h4, p{
+    padding: 0;
+    margin: 0;
+}
+
+@mixin btn {
+    height: 2rem;
+    width: 5rem;
+    color: white;
+    background-color: $btn-background-color;
+    transition-duration: 1s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 0.5rem;
+    &:hover{
+        color: seashell;
+        background-color: $btn-hover-background-color;
+    }
+    &.disabled{
+        background-color: rgba($color: royalblue, $alpha: 0.5);
+        cursor: default;
+    }
+}
+

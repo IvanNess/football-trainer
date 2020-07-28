@@ -1,0 +1,15 @@
+@import '../App.scss';
+
+.play-btn{
+    padding: 0.3rem 1rem;
+    text-align: center;
+    //margin: 1rem 0;
+    background-color: $btn-background-color;
+    color: white;
+    border-radius: 3px;
+    &:hover{
+        background-color: $btn-hover-background-color;
+        color: $btn-background-color;
+        cursor: pointer;
+    }
+}

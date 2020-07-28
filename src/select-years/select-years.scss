@@ -1,0 +1,12 @@
+@import '../App.scss';
+
+.select-years{
+    .select-div{
+        padding: 1rem  0;
+        display: flex;
+        flex-direction: row;
+        .btn{
+            @include btn();
+        }
+    }
+}

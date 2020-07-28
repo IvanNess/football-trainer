@@ -1,0 +1,22 @@
+.user-panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: 1rem 0;
+    .data{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .question-number{
+            margin-right: 1rem;
+        }
+    }
+    .username{
+        .link{
+            margin-left: 1rem;
+            font-size: 1rem;
+        }
+    }
+}

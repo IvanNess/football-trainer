@@ -1,0 +1,31 @@
+const champions = {
+    italy: {
+        2019: 'juventus',
+        2018: 'juventus',
+        2017: 'juventus',
+        2016: 'juventus',
+        2015: 'juventus',
+        2014: 'juventus',
+        2013: 'juventus',
+        2012: 'juventus',
+        2011: 'milan',
+        2010: 'internazionale',
+        2009: 'internazionale',
+        2008: 'internazionale',
+        2007: 'internazionale',
+        2006: 'internazionale',
+        2005: 'not awarded',
+        2004: 'milan',
+        2003: 'juventus',
+        2002: 'juventus',
+        2001: 'roma',
+        2000: 'lazio',
+        1999: 'milan',
+        1998: 'juventus',
+        1997: 'juventus',
+        1996: 'milan',
+        1995: 'juventus',
+        1994: 'milan',
+        1993: 'milan' 
+    }
+}

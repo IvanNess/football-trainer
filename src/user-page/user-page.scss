@@ -1,0 +1,54 @@
+@import '../App.scss';
+
+.user-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .user-page-wrapper{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 0;
+            .user{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .btn{
+                    @include btn();
+                    height: 1.5rem;
+                } 
+                .username{
+                    margin: 0 0.4rem;
+                }
+            }
+            .game{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .play-btn{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 1.5rem;
+                    padding: 0 1rem;
+                    margin: 0 0 0 0.5rem;
+                }
+            }
+        }
+        
+        .table{
+            width: 100%;
+            text-align: start;
+            h3{
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import '../App.scss';
+
+.start-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    justify-content: flex-end;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.7);
+        .log-in, .sign-up{
+            margin: 0 0.5rem;
+        }
+        .log-in, .sign-up{
+        color: $btn-background-color;
+            &:hover{
+                cursor: pointer;
+                color: $btn-hover-background-color;
+            }
+        } 
+    } 
+}
