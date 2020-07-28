@@ -17,7 +17,7 @@ const LogIn = ({user, setUsername}) => {
         if(error && error.response.status===403){
             message.error('Wrong user or password')
         }
-    }, [error, message])
+    }, [error])
 
     if(user.isLoaded && user.username)
         return <Redirect to={`/user/${user.username}`}/>

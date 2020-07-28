@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import { Select, Modal } from 'antd'
 import {connect} from 'react-redux'
 

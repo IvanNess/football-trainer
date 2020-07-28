@@ -38,7 +38,7 @@ const UserLoader = ({setUsername, setUser, user, fullLoad})=>{
         if(error){
             setUser({username: undefined})
         }
-    }, [error, isLoading, data])
+    }, [error, isLoading, data, fullLoad, setUser, setUsername])
 
     return(
         <div className={`user-loader`}>

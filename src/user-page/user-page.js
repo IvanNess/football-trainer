@@ -13,7 +13,7 @@ const UserPage = ({ user, match, setUser }) => {
 
     console.log('user', user, match)
 
-    const [{ error, isLoading, data }, doFetch] = useFetch(`${process.env.REACT_APP_SERVER_URI}/logout`)
+    const [{ data }, doFetch] = useFetch(`${process.env.REACT_APP_SERVER_URI}/logout`)
 
     if ((user.isLoaded && user.username !== match.params.username) || (user.isLoaded && user.username === undefined)) {
         return <Redirect to='/login' />

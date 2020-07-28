@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import shuffle from 'shuffle-array'
 import {connect} from 'react-redux'
 

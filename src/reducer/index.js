@@ -1,4 +1,3 @@
-import updateYear from './updateYear'
 import updateYears from './updateYears'
 import updateIsFirstAnswered from './updateIsFirstAnswered'
 import updateIsSecondAnswered from './updateIsSecondAnswered'

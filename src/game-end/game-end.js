@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react'
+import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux'
 import { NavLink, Redirect } from 'react-router-dom'
 import {Modal, Button} from 'antd'
@@ -30,7 +30,7 @@ const GameEnd = ({ gameEndProps, score, isSecondAnswered, isFirstAnswered, years
             dispatchStart()
             setStart(true)
         }
-    }, [error, data])
+    }, [error, data, dispatchStart])
 
     if(start){
         setStart(false)

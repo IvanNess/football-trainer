@@ -27,10 +27,6 @@ const countries = {
         name: 'Senegal',
         flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg'
     },
-    france: {
-        name: 'France',
-        flagUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg'
-    },
     argentina: {
         name: 'Argentina',
         flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg'

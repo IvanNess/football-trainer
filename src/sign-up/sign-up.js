@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useCallback} from 'react'
+import React, {useEffect} from 'react'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
 import { Form, Input, Button, message } from 'antd'
@@ -30,7 +30,7 @@ const SignUp = ({user, setUsername}) => {
         if(error && error.response.status===403){
             message.error('Sorry! User with this username already exists.')
         }
-    }, [error, message])
+    }, [error])
 
     console.log('data', data)
     if(data && data.username){

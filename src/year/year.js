@@ -59,7 +59,7 @@ const Year = ({year, countryFile, onGoalScorer, storeActiveKey})=>{
         <div className={`year`} data-testid={`year`}>
             <div className={`country`} data-testid={`country`}>
             <div className='title'>{country.name}</div>
-                <img src={country.flagUrl}/>
+                <img src={country.flagUrl} alt=''/>
             </div>
             <div className={`champion competition`} data-testid={`champion`}>
                 <div className='title'>Champion</div>

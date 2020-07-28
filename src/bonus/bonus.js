@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import shuffle from 'shuffle-array'
 import { Select, Modal } from 'antd'
@@ -94,8 +94,6 @@ const Bonus = ({ year, showBonus, onNext, questionNumber, setGameEndProps }) => 
       }
     }
   }
-
-  const initbonusRefWidth = 400
 
   return (
     showBonus && <div className={`bonus`}>
