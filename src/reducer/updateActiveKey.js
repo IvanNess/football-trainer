@@ -9,7 +9,7 @@ const updateActiveKey = (state, {type, payload})=>{
             return payload.activeKey.length === 0 ? [] : [1]
 
         default: 
-            return state.updateActiveKey
+            return state.activeKey
     }
 
     

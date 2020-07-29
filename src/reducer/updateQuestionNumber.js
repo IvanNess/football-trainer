@@ -1,10 +1,10 @@
 const updateQuestionNumber = (state, {type, payload})=>{
     if(state===undefined){
-        return 10
+        return 1
     }
     switch(type){
         case 'START_AGAIN':
-            return 10
+            return 1
         case 'NEXT_QUESTION':
             return state.questionNumber + 1
         default:
