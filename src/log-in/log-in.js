@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, NavLink } from 'react-router-dom'
 import { Form, Input, Button, message } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
@@ -118,7 +118,7 @@ const LogIn = ({ user, setUsername, score, questionNumber }) => {
                         <Button type="primary" htmlType="submit" className="login-form-button" disabled={isLoading || recordIsLoading}>
                             Log in
                         </Button>
-                        <a href="/signup">...or register now!</a>
+                        <NavLink to="/signup">...or register now!</NavLink>
                     </Form.Item>
                 </Form>
                 ...or skip authorization and proceed to the game

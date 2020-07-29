@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useCallback, useState} from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {Redirect, NavLink} from 'react-router-dom'
 import { Form, Input, Button, message } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import useFetch from '../useFetch'
@@ -11,9 +11,40 @@ import UserLoader from '../user-loader'
 import './sign-up.scss'
 import PlayButton from '../play-btn'
 
-const SignUp = ({user, setUsername}) => {
+const SignUp = ({user, setUsername, score, questionNumber}) => {
 
     const [{error, isLoading, data}, doFetch] = useFetch(`${process.env.REACT_APP_SERVER_URI}/signup`)
+
+    const [{ isLoading: recordIsLoading, data: recordData }, recordDoFetch] = useFetch(`${process.env.REACT_APP_SERVER_URI}/record`)
+
+    const [isRecord, setIsRecord] = useState(false)
+
+    console.log('isRecord', isRecord)
+
+    useEffect(() => {
+        setIsRecord(document.location.search === '?record')
+    }, [])
+
+    const recordDoFetchCb = useCallback(recordDoFetch, [])
+
+    useEffect(()=>{
+        console.log('user', user, recordData, isRecord, questionNumber, score)
+        if (user.isLoaded && user.username && isRecord && !recordData) {
+            console.log('recordDoFetchCb', isRecord, user, recordData, questionNumber, score)
+            recordDoFetchCb({
+                data: {
+                    score, questionNumber
+                }
+            }) 
+        }
+    }, [ recordDoFetchCb, user, recordData, isRecord, questionNumber, score])
+
+    useEffect(()=>{
+        if(recordData){
+            console.log('recordData', recordData)
+            setIsRecord(false)
+        }
+    }, [recordData, setIsRecord])
 
     const onFinish = async (values) => {
         const hashPassword = await bcrypt.hash(values.password, 10)
@@ -32,12 +63,14 @@ const SignUp = ({user, setUsername}) => {
         }
     }, [error])
 
-    console.log('data', data)
-    if(data && data.username){
-        setUsername({username: data.username})
-    }
+    useEffect(()=>{
+        console.log('data', data)
+        if (data && data.username) {
+            setUsername({ username: data.username })
+        }
+    }, [data, setUsername])
 
-    if(user.isLoaded && user.username)
+    if(user.isLoaded && user.username && !isRecord)
         return <Redirect to={`/user/${user.username}`}/>
 
     return (
@@ -107,10 +140,10 @@ const SignUp = ({user, setUsername}) => {
                     </Form.Item>
 
                     <Form.Item>
-                        <Button type="primary" htmlType="submit" className="login-form-button" disabled={isLoading}>
+                        <Button type="primary" htmlType="submit" className="login-form-button" disabled={isLoading || recordIsLoading}>
                             Sign Up
                     </Button>
-                        <a href="/login">...or log in if you have an account</a>
+                        <NavLink to="/login">...or log in if you have an account</NavLink>
                     </Form.Item>
                 </Form>
                 ...or skip registration and proceed to the game
@@ -120,8 +153,8 @@ const SignUp = ({user, setUsername}) => {
     )
 }
 
-const mapStateToProps = ({user})=>({
-    user
+const mapStateToProps = ({user, score, questionNumber})=>({
+    user, score, questionNumber
 })
 
 const mapDispatchToProps = ({

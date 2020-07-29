@@ -62,7 +62,7 @@ const SelectYears = ({ year, allYears, isFirstAnswered, selectedValue, onChangeD
         <div className={`select-years`}>
             <div className='select-div'>
                 <Select
-                    showSearch
+                    showSearch={document.documentElement.clientWidth >=500}
                     listHeight={120}
                     style={{ width: 200 }}
                     placeholder="Select a year"

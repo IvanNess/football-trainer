@@ -99,7 +99,7 @@ const Bonus = ({ year, showBonus, onNext, questionNumber, setGameEndProps }) => 
     showBonus && <div className={`bonus`}>
       <div className={`title`}>{`Bonus! Let's remember teams played in ${year} ${tournament} final.`}</div>
       <Select
-        showSearch
+        showSearch={document.documentElement.clientWidth >=500}
         listHeight={120}
         placeholder="Select a final"
         optionFilterProp="children"
