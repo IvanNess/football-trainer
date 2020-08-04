@@ -65,10 +65,8 @@ const LogIn = ({ user, setUsername, score, questionNumber }) => {
     const onFinish = async values => {
         console.log('Received values of form: ', values)
         doFetch({
-            data: {
-                username: values.username,
-                password: values.password,
-            }
+            username: values.username,
+            password: values.password,
         })
     }
 
