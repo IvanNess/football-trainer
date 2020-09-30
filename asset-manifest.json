@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/football-years/static/css/main.afe33495.chunk.css",
+    "main.js": "/football-years/static/js/main.cd774e76.chunk.js",
+    "main.js.map": "/football-years/static/js/main.cd774e76.chunk.js.map",
+    "runtime-main.js": "/football-years/static/js/runtime-main.246fe17c.js",
+    "runtime-main.js.map": "/football-years/static/js/runtime-main.246fe17c.js.map",
+    "static/css/2.e7180fea.chunk.css": "/football-years/static/css/2.e7180fea.chunk.css",
+    "static/js/2.69770245.chunk.js": "/football-years/static/js/2.69770245.chunk.js",
+    "static/js/2.69770245.chunk.js.map": "/football-years/static/js/2.69770245.chunk.js.map",
+    "index.html": "/football-years/index.html",
+    "precache-manifest.6a4f43c28441abd91c760b22abf125e4.js": "/football-years/precache-manifest.6a4f43c28441abd91c760b22abf125e4.js",
+    "service-worker.js": "/football-years/service-worker.js",
+    "static/css/2.e7180fea.chunk.css.map": "/football-years/static/css/2.e7180fea.chunk.css.map",
+    "static/css/main.afe33495.chunk.css.map": "/football-years/static/css/main.afe33495.chunk.css.map",
+    "static/js/2.69770245.chunk.js.LICENSE.txt": "/football-years/static/js/2.69770245.chunk.js.LICENSE.txt",
+    "static/media/blackburn.png": "/football-years/static/media/blackburn.0bd56bcc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.246fe17c.js",
+    "static/css/2.e7180fea.chunk.css",
+    "static/js/2.69770245.chunk.js",
+    "static/css/main.afe33495.chunk.css",
+    "static/js/main.cd774e76.chunk.js"
+  ]
+}
