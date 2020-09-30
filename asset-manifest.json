@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/football-trainer/static/css/main.e622a8fd.chunk.css",
+    "main.css": "/football-trainer/static/css/main.9cf88dc8.chunk.css",
     "main.js": "/football-trainer/static/js/main.5b524b01.chunk.js",
     "main.js.map": "/football-trainer/static/js/main.5b524b01.chunk.js.map",
     "runtime-main.js": "/football-trainer/static/js/runtime-main.263effe0.js",
@@ -9,10 +9,10 @@
     "static/js/2.80c9afd7.chunk.js": "/football-trainer/static/js/2.80c9afd7.chunk.js",
     "static/js/2.80c9afd7.chunk.js.map": "/football-trainer/static/js/2.80c9afd7.chunk.js.map",
     "index.html": "/football-trainer/index.html",
-    "precache-manifest.7af58187d4ba2a135a2d9058ebdfd4e2.js": "/football-trainer/precache-manifest.7af58187d4ba2a135a2d9058ebdfd4e2.js",
+    "precache-manifest.68d6b606fef017d214f30caabfb422f3.js": "/football-trainer/precache-manifest.68d6b606fef017d214f30caabfb422f3.js",
     "service-worker.js": "/football-trainer/service-worker.js",
     "static/css/2.e7180fea.chunk.css.map": "/football-trainer/static/css/2.e7180fea.chunk.css.map",
-    "static/css/main.e622a8fd.chunk.css.map": "/football-trainer/static/css/main.e622a8fd.chunk.css.map",
+    "static/css/main.9cf88dc8.chunk.css.map": "/football-trainer/static/css/main.9cf88dc8.chunk.css.map",
     "static/js/2.80c9afd7.chunk.js.LICENSE.txt": "/football-trainer/static/js/2.80c9afd7.chunk.js.LICENSE.txt",
     "static/media/blackburn.png": "/football-trainer/static/media/blackburn.0bd56bcc.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.263effe0.js",
     "static/css/2.e7180fea.chunk.css",
     "static/js/2.80c9afd7.chunk.js",
-    "static/css/main.e622a8fd.chunk.css",
+    "static/css/main.9cf88dc8.chunk.css",
     "static/js/main.5b524b01.chunk.js"
   ]
 }
