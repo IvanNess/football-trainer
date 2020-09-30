@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6581beef909fa482b7480b0239c85fc0",
+    "revision": "a9b7d132815f593f3612706e8afd2d78",
     "url": "/football-trainer/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/football-trainer/static/css/2.e7180fea.chunk.css"
   },
   {
-    "revision": "e4e49c9666bc4af402bd",
+    "revision": "166e52650c4225fc4aa9",
     "url": "/football-trainer/static/css/main.afe33495.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/football-trainer/static/js/2.80c9afd7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e4e49c9666bc4af402bd",
-    "url": "/football-trainer/static/js/main.c0606a2a.chunk.js"
+    "revision": "166e52650c4225fc4aa9",
+    "url": "/football-trainer/static/js/main.0c23ed60.chunk.js"
   },
   {
     "revision": "f75d44b3c3bc214bc1f9",
