@@ -15,13 +15,11 @@ const useFetch = url =>{
     const doFetch = async (data)=>{
         try{
             setResponse({error: false, isLoading: true, data: null})
-            console.log('data', data)
             const response = await axios(url, {
                 method: 'post',
                 data,
                 withCredentials: true
             })
-            console.log(response)
             setResponse({error: false, isLoading: false, data: response.data})
         } catch(err){
             setResponse({error: err, isLoading: false, data: null})

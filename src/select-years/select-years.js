@@ -32,7 +32,6 @@ const SelectYears = ({ year, allYears, isFirstAnswered, selectedValue, onChangeD
     }
 
     const onclick = ()=>{
-        console.log('onclick', answer, year, questionNumber)
         if(answer===year){
             Modal.info({
                 title: 'Success',

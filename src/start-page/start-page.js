@@ -11,18 +11,20 @@ import './start-page.scss'
 const StartPage = ({user}) => {
 
     if(user.isLoaded && user.username)
-        return <Redirect to='/game'/>
+        return <Redirect to={`${process.env.REACT_APP_MAIN_PATH}/game`}/>
 
     return (
         <div className={`start-page`}>
             <UserLoader/>
             {user.isLoaded && <div className={`wrapper`}>
+                <h2>Guess a football year!!!</h2>
+                <p>Push the play button to proceed to first challenge.</p>
                 <PlayButton/>
                 <div className={`sign`}>
                     ...or you could
-                    <Link to={`/login`} className={`log-in`}>log in</Link>
+                    <Link to={`${process.env.REACT_APP_MAIN_PATH}/login`} className={`log-in`}>log in</Link>
                     or
-                    <Link to={`/signup`} className={`sign-up`}>sign up</Link>
+                    <Link to={`${process.env.REACT_APP_MAIN_PATH}/signup`} className={`sign-up`}>sign up</Link>
                     to record your results.
                 </div>
             </div>}

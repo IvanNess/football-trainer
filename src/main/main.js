@@ -19,8 +19,6 @@ const countryAppearance = 2
 
 const Main = ({year}) => {
 
-    console.log('year changed', year)
-
     const countries = shuffle.pick(countryArr, {picks: countryAppearance})
 
     return (

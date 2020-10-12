@@ -2,7 +2,6 @@ import { allYears } from './index'
 import shuffle from 'shuffle-array'
 
 const deleteYear = (years, year) => {
-    console.log(years, year)
     const yearIdx = years.findIndex(searchedYear => searchedYear === year)
     const newYears = [...years.slice(0, yearIdx), ...years.slice(yearIdx + 1)]
     return newYears

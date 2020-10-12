@@ -12,7 +12,6 @@ const updateGameEndProps = (state, {type, payload}) =>{
             }
             
         case 'SET_GAME_END_PROPS':
-            console.log('set game end props', payload)
             return payload
         default:
             return state.gameEndProps

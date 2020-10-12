@@ -31,7 +31,6 @@ const LogIn = ({ user, setUsername, score, questionNumber }) => {
 
     useEffect(()=>{
         if (user.isLoaded && user.username && isRecord && !recordData) {
-            console.log('recordDoFetchCb', isRecord, user, recordData, questionNumber, score)
             recordDoFetchCb({
                 data: {
                     score, questionNumber
@@ -43,13 +42,11 @@ const LogIn = ({ user, setUsername, score, questionNumber }) => {
 
     useEffect(()=>{
         if(recordData){
-            console.log('recordData', recordData)
             setIsRecord(false)
         }
     }, [recordData, setIsRecord])
 
     useEffect(()=>{
-        console.log('data', data)
         if (data && data.username) {
             setUsername({ username: data.username })
         }
@@ -57,13 +54,12 @@ const LogIn = ({ user, setUsername, score, questionNumber }) => {
 
 
     if (user.isLoaded && user.username && !isRecord) {
-        return <Redirect to={`/user/${user.username}`} />
+        return <Redirect to={`${process.env.REACT_APP_MAIN_PATH}/user/${user.username}`} />
     }
 
 
 
     const onFinish = async values => {
-        console.log('Received values of form: ', values)
         doFetch({
             username: values.username,
             password: values.password,
@@ -116,7 +112,7 @@ const LogIn = ({ user, setUsername, score, questionNumber }) => {
                         <Button type="primary" htmlType="submit" className="login-form-button" disabled={isLoading || recordIsLoading}>
                             Log in
                         </Button>
-                        <NavLink to="/signup">...or register now!</NavLink>
+                        <NavLink to={`${process.env.REACT_APP_MAIN_PATH}/signup`}>...or register now!</NavLink>
                     </Form.Item>
                 </Form>
                 ...or skip authorization and proceed to the game

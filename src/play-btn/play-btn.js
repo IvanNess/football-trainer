@@ -5,7 +5,7 @@ import './play-btn.scss'
 
 const PlayButton = ()=>{
     return(
-        <Link to={`/game`} className={`play-btn`}>Play</Link>
+        <Link to={`${process.env.REACT_APP_MAIN_PATH}/game`} className={`play-btn`}>Play</Link>
     )
 }
 

@@ -19,8 +19,6 @@ const SignUp = ({user, setUsername, score, questionNumber}) => {
 
     const [isRecord, setIsRecord] = useState(false)
 
-    console.log('isRecord', isRecord)
-
     useEffect(() => {
         setIsRecord(document.location.search === '?record')
     }, [])
@@ -28,9 +26,7 @@ const SignUp = ({user, setUsername, score, questionNumber}) => {
     const recordDoFetchCb = useCallback(recordDoFetch, [])
 
     useEffect(()=>{
-        console.log('user', user, recordData, isRecord, questionNumber, score)
         if (user.isLoaded && user.username && isRecord && !recordData) {
-            console.log('recordDoFetchCb', isRecord, user, recordData, questionNumber, score)
             recordDoFetchCb({
                 data: {
                     score, questionNumber
@@ -41,7 +37,6 @@ const SignUp = ({user, setUsername, score, questionNumber}) => {
 
     useEffect(()=>{
         if(recordData){
-            console.log('recordData', recordData)
             setIsRecord(false)
         }
     }, [recordData, setIsRecord])
@@ -54,7 +49,6 @@ const SignUp = ({user, setUsername, score, questionNumber}) => {
             //password: values.password,
             remember: values.remember
         }})
-        console.log('Received values of form: ', values);
     }
 
     useEffect(()=>{
@@ -64,14 +58,13 @@ const SignUp = ({user, setUsername, score, questionNumber}) => {
     }, [error])
 
     useEffect(()=>{
-        console.log('data', data)
         if (data && data.username) {
             setUsername({ username: data.username })
         }
     }, [data, setUsername])
 
     if(user.isLoaded && user.username && !isRecord)
-        return <Redirect to={`/user/${user.username}`}/>
+        return <Redirect to={`${process.env.REACT_APP_MAIN_PATH}/user/${user.username}`}/>
 
     return (
         <div className={`signup-page`}>
@@ -143,7 +136,7 @@ const SignUp = ({user, setUsername, score, questionNumber}) => {
                         <Button type="primary" htmlType="submit" className="login-form-button" disabled={isLoading || recordIsLoading}>
                             Sign Up
                     </Button>
-                        <NavLink to="/login">...or log in if you have an account</NavLink>
+                        <NavLink to={`${process.env.REACT_APP_MAIN_PATH}/login`}>...or log in if you have an account</NavLink>
                     </Form.Item>
                 </Form>
                 ...or skip registration and proceed to the game

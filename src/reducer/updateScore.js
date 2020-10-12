@@ -12,7 +12,6 @@ const updateScore = (state, {type, payload})=>{
         case 'ON_FIRST_MODAL':
             return state.score + 2
         case 'ON_GOALSCORER':
-            console.log(state.isFirstAnswered, payload.manual, state.isGoalscorerOpenedFirstTime)
             return !state.isFirstAnswered && payload.manual && state.isGoalscorerOpenedFirstTime ? state.score - state.penalty : state.score
             
         default:

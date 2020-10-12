@@ -12,7 +12,6 @@ const updateUser = (state, {type, payload})=>{
                 isLoaded: true
             })
         case 'SET_USER':
-            console.log('set user', payload)
             return ({
                 ...payload,
                 isLoaded: true

@@ -8,18 +8,16 @@ import './user-panel.scss'
 
 const UserPanel = ({ questionNumber, score, user }) => {
 
-    console.log('user', user)
-
     return (
         <div className={`user-panel`}>
             <UserLoader />
             <div className={`username`}>
-                <NavLink to={`/user/${user.username}`} className={`link`}>{user.isLoaded && user.username}</NavLink>
+                <NavLink to={`${process.env.REACT_APP_MAIN_PATH}/user/${user.username}`} className={`link`}>{user.isLoaded && user.username}</NavLink>
                 {
                     user.isLoaded && !user.username
                     && <span>
-                        <NavLink className='link' to={`/login`}>Log in</NavLink>
-                        <NavLink className='link' to={`/signup`}>Sign up</NavLink>
+                        <NavLink className='link' to={`${process.env.REACT_APP_MAIN_PATH}/login`}>Log in</NavLink>
+                        <NavLink className='link' to={`${process.env.REACT_APP_MAIN_PATH}/signup`}>Sign up</NavLink>
                     </span>
                 }
             </div>

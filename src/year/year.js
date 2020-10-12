@@ -18,7 +18,6 @@ const Year = ({year, countryFile, onGoalScorer, storeActiveKey})=>{
     const [activeKey, setActiveKey] = useState([])
 
     useEffect(()=>{
-        //console.log('year changed?', year)
         setCollapseContentVisibility(false)
         onGoalScorer({activeKey: []})
         
@@ -28,7 +27,6 @@ const Year = ({year, countryFile, onGoalScorer, storeActiveKey})=>{
     }, [year, onGoalScorer])
 
     useEffect(()=>{
-        //console.log('storeActiveKey', storeActiveKey)
         setActiveKey(storeActiveKey)
     }, [storeActiveKey])
 
@@ -52,7 +50,6 @@ const Year = ({year, countryFile, onGoalScorer, storeActiveKey})=>{
     })
 
     const onChange = (key)=>{
-        //console.log('active key', key)
         onGoalScorer({activeKey: key, manual: true})
     }
 

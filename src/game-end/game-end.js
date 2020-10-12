@@ -14,8 +14,6 @@ const GameEnd = ({ gameEndProps, score, isSecondAnswered, isFirstAnswered, years
     const [start, setStart] = useState(false)
     const [isToUserPage, seIsToUserPage] = useState(false)
 
-    console.log('game end', gameEndProps, start)
-
     const startAgain = ()=>{
         doFetch({
             data:{
@@ -34,19 +32,17 @@ const GameEnd = ({ gameEndProps, score, isSecondAnswered, isFirstAnswered, years
 
     if(start){
         setStart(false)
-        return <Redirect to='/game'/>
+        return <Redirect to={`${process.env.REACT_APP_MAIN_PATH}/game`}/>
     }
 
     if(!isLoading && isToUserPage){
-        return <Redirect to={`/user/${user.username}`}/>
+        return <Redirect to={`${process.env.REACT_APP_MAIN_PATH}/user/${user.username}`}/>
     }
 
     const toUserPage = ()=>{
         startAgain()
         seIsToUserPage(true)
     }
-
-    console.log('game end', gameEndProps, years, isFirstAnswered, isSecondAnswered)
 
     return (
         <div className={`game-end`}>
@@ -74,8 +70,8 @@ const GameEnd = ({ gameEndProps, score, isSecondAnswered, isFirstAnswered, years
                     {isFirstAnswered && !gameEndProps.isRightAnswered &&<div>{`Not correct. It is ${gameEndProps.final}.`}</div>}
                     <div>{`Your final score is ${score} points.`}</div>
                     {!user.username && <div className={`record`} style={{margin: '1rem 0'}}>
-                        You may<NavLink className={`link`} to={`/login?record`} style={{'margin': '0.4rem'}}>Log in</NavLink>or
-                        <NavLink className={`link`} to={`/signup?record`} style={{'margin': '0.4rem'}}>Sign up</NavLink>
+                        You may<NavLink className={`link`} to={`${process.env.REACT_APP_MAIN_PATH}/login?record`} style={{'margin': '0.4rem'}}>Log in</NavLink>or
+                        <NavLink className={`link`} to={`${process.env.REACT_APP_MAIN_PATH}/signup?record`} style={{'margin': '0.4rem'}}>Sign up</NavLink>
                         to record this result.
                     </div>}
                 </div>

@@ -11,25 +11,19 @@ import './user-page.scss'
 
 const UserPage = ({ user, match, setUser }) => {
 
-    console.log('user', user, match)
 
     const [{ data }, doFetch] = useFetch(`${process.env.REACT_APP_SERVER_URI}/logout`)
 
     if ((user.isLoaded && user.username !== match.params.username) || (user.isLoaded && user.username === undefined)) {
-        return <Redirect to='/login' />
+        return <Redirect to={`${process.env.REACT_APP_MAIN_PATH}/login`} />
     }
 
     if (data && !data.username) {
-        console.log('set user to undefined')
         setUser({ username: undefined })
     }
 
-    if (data) {
-        console.log('data', data)
-    }
 
     const logout = () => {
-        console.log('logout')
         doFetch()
     }
 
@@ -56,7 +50,6 @@ const UserPage = ({ user, match, setUser }) => {
             title: 'Date',
             dataIndex: 'date',
             sorter: (a, b) => {
-                console.log('date', a.date, a.date > b.date)
                 return a.date > b.date
             },
             sortDirections: ['descend', 'ascend', 'descend'],

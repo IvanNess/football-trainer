@@ -6,13 +6,7 @@ import useFetch from '../useFetch'
 
 import './user-loader.scss'
 
-const UserLoader = ({setUsername, setUser, user, fullLoad})=>{
-
-    useEffect(()=>{
-        return(()=>{
-            console.log('user-loader was unmounted')
-        })
-    }, [])
+const UserLoader = ({setUsername, setUser, fullLoad})=>{
 
     const[{error, isLoading, data}, doFetch] = useFetch(`${process.env.REACT_APP_SERVER_URI}/user`) 
 
@@ -28,7 +22,6 @@ const UserLoader = ({setUsername, setUser, user, fullLoad})=>{
     }, [doFetchCb, fullLoad])
 
     useEffect(()=>{
-        console.log({error, isLoading, data})
         if(data && data.username && !fullLoad){
             setUsername({username: data.username})
         }
@@ -49,13 +42,9 @@ const UserLoader = ({setUsername, setUser, user, fullLoad})=>{
     )
 }
 
-const mapStateToProps = ({user})=>({
-    user
-})
-
 const mapDispatchToProps = ({
     setUsername: (payload)=> ({type: 'SET_USERNAME', payload}),
     setUser: (payload)=> ({type: 'SET_USER', payload})
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserLoader)
+export default connect(null, mapDispatchToProps)(UserLoader)

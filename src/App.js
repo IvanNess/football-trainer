@@ -14,17 +14,16 @@ import 'antd/dist/antd.css'
 import './App.scss'
 
 function App() {
-  console.log(store.getState())
 
   return (
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route path='/' exact component={StartPage} />
-          <Route path='/game' component={Main} />
-          <Route path='/signup' component={SignUp} />
-          <Route path='/login' component={LogIn} />
-          <Route path='/user/:username' component={UserPage} />
+          <Route path={`${process.env.REACT_APP_MAIN_PATH}/`} exact component={StartPage} />
+          <Route path={`${process.env.REACT_APP_MAIN_PATH}/game`} component={Main} />
+          <Route path={`${process.env.REACT_APP_MAIN_PATH}/signup`} component={SignUp} />
+          <Route path={`${process.env.REACT_APP_MAIN_PATH}/login`} component={LogIn} />
+          <Route path={`${process.env.REACT_APP_MAIN_PATH}/user/:username`} component={UserPage} />
         </Switch>
       </Router>
     </Provider>

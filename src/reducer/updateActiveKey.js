@@ -5,7 +5,6 @@ const updateActiveKey = (state, {type, payload})=>{
 
     switch(type){
         case 'ON_GOALSCORER':
-            console.log('on goalscorer', payload)
             return payload.activeKey.length === 0 ? [] : [1]
 
         default: 
